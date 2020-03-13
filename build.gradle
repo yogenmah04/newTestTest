@@ -207,6 +207,7 @@ dependencies {
     compile ("org.springframework.boot:spring-boot-starter-web") {
         exclude module: 'spring-boot-starter-tomcat'
     }
+	compile 'com.github.jsimone:webapp-runner:8.5.11.3'
     compile "org.springframework.boot:spring-boot-starter-undertow"
     compile "org.springframework.boot:spring-boot-starter-thymeleaf"
     compile "org.zalando:problem-spring-web:0.24.0-RC.0"
@@ -253,7 +254,18 @@ wrapper {
 }
 
 task stage(dependsOn: 'bootWar') {
+	dependsOn clean, war
 }
+
+
+task copyToLib(type: Copy) {
+    into "$buildDir/server"
+    from(configurations.compile) {
+        include "webapp-runner*"
+    }
+}
+
+stage.dependsOn(copyToLib)
 
 if (project.hasProperty('nodeInstall')) {
     node {
