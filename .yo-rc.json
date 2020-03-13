@@ -1,0 +1,35 @@
+{
+    "generator-jhipster": {
+        "promptValues": {
+            "packageName": "com"
+        },
+        "jhipsterVersion": "5.8.0",
+        "applicationType": "monolith",
+        "baseName": "newTestTest",
+        "packageName": "com",
+        "packageFolder": "com",
+        "serverPort": "8080",
+        "authenticationType": "jwt",
+        "cacheProvider": "ehcache",
+        "enableHibernateCache": true,
+        "websocket": false,
+        "databaseType": "sql",
+        "devDatabaseType": "postgresql",
+        "prodDatabaseType": "postgresql",
+        "searchEngine": false,
+        "messageBroker": false,
+        "serviceDiscoveryType": false,
+        "buildTool": "gradle",
+        "enableSwaggerCodegen": false,
+        "jwtSecretKey": "YmM5ODM5NTNhMWNhZjNjYWY5YTBlODU0ZTJlMmEyMjUxOTAyMTllMjM2N2JhYzMwYmE3OTQwNmNjNDc1NjE1ODkxMWRkMGI0YmQ2MTQyYmE2NjRjMTA5NWVkNTdmN2QzZTllNzZkZTdmOWVlNDc2NTdlZDgzZTY4MmI0OTVkZDY=",
+        "clientFramework": "angularX",
+        "useSass": false,
+        "clientPackageManager": "npm",
+        "testFrameworks": [],
+        "jhiPrefix": "jhi",
+        "entitySuffix": "",
+        "dtoSuffix": "DTO",
+        "otherModules": [],
+        "enableTranslation": false
+    }
+}
